@@ -13,7 +13,7 @@
 
             $http({
               'method': 'GET',
-              'url': 'https://blockchain.info/unspent',
+              'url': 'https://explorer.sovcore.org/block/',
               'params': {
                 'active': address,
                 'format': 'json',
@@ -41,7 +41,7 @@
 
               $http({
                 'method': 'GET',
-                'url': 'https://blockchain.info/q/addressbalance/' + address,
+                'url': 'https://explorer.sovcore.org/address' + address,
                 'params': {
                   'format': 'json'
                 }
@@ -64,7 +64,7 @@
         , pushTx = function pushTx(transactionHash) {
             return $http({
               'method': 'POST',
-              'url': 'https://blockchain.info/pushtx',
+              'url': 'https://explorer.sovcore.org/tx',
               'params': {
                 'cors': true,
                 'format': 'json',
