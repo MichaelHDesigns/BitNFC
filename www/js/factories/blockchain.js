@@ -13,7 +13,7 @@
 
             $http({
               'method': 'GET',
-              'url': 'https://explorer.sovcore.org/block/',
+              'url': 'http://154.12.237.243:3001/insight-api/block/',
               'params': {
                 'active': address,
                 'format': 'json',
@@ -41,7 +41,7 @@
 
               $http({
                 'method': 'GET',
-                'url': 'https://explorer.sovcore.org/address' + address,
+                'url': 'http://154.12.237.243:3001/insight-api/address' + address,
                 'params': {
                   'format': 'json'
                 }
@@ -64,7 +64,7 @@
         , pushTx = function pushTx(transactionHash) {
             return $http({
               'method': 'POST',
-              'url': 'https://explorer.sovcore.org/tx',
+              'url': 'http://154.12.237.243:3001/insight-api/tx',
               'params': {
                 'cors': true,
                 'format': 'json',
